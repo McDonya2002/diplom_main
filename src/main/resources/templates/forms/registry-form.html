@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <script src="/jquery.js"></script>
+    <link rel="stylesheet" href="/bootstrap.css" />
+    <script src="/tailwindcss.js"></script>
+    <link rel="stylesheet" href="/style.css" />
+    <title>Личный кабинет</title>
+  </head>
+  <body>
+  <!-- НАЧАЛО МЕНЮ -->
+  <header class="bg-green overflow-scroll ">
+      <div class="container-md">
+          <div class="menu">
+              <ul class=" d-flex align-items-center xl:justify-center bg-green py-3">
+                  <li><a class="dropdown-item " href="/">Главная</a></li>
+                  <li><a class="dropdown-item" href="/account">Личный кабинет</a></li>
+                  <li><a class="dropdown-item" href="/new-point">Добавить новую точку</a></li>
+                  <li><a class="dropdown-item" href="/map">Карта</a></li>
+                  <li id="profileImg"><a class="dropdown-item" href="/account">
+                      <img src="/img/account_circle.svg" id="userAvatarMenu" class="aspect-square" alt=""></a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </header>
+  <!--КОНЕЦ МЕНЮ -->
+    <div class="container-md my-1.5 md:my-10 ">
+        <form method="post" class="registry-form md:w-2/3 xl:w-1/2 md:max-w-[600px] w-full mx-auto md:my-10 my-3" enctype="application/x-www-form-urlencoded">
+            <div class="md:text-4xl text-2xl mb-5 text-center">Регистрация</div>
+            <div class="form-row mt-5">
+                <input class="w-full block" type="text" name="userLoginForm" id="userLoginForm" required>
+                <label for="userLoginForm">Логин</label>
+            </div>
+            <div class="form-row mt-5">
+                <input class="w-full block" type="text" name="userLastNameForm" id="userLastNameForm" required>
+                <label for="userLastNameForm">Фамилия</label>
+            </div>
+            <div class="form-row mt-5">
+                <input class="w-full block" type="text" name="userFirstNameForm" id="userFirstNameForm" required>
+                <label for="userFirstNameForm">Имя</label>
+            </div>
+            <div class="form-row mt-5">
+                <input class="w-full block" type="text" name="userPatronymicForm" id="userPatronymicForm" required>
+                <label for="userPatronymicForm">Отчество</label>
+            </div>
+            <div class="form-row mt-5">
+                <input class="w-full block" type="password" name="userPasswordForm" id="userPasswordForm" required>
+                <label for="userPasswordForm">Пароль</label>
+            </div>
+            <button class="mt-4 block w-full text-center rounded-xl py-2 md:!py-1 md:mx-auto bg-green text-white text-xl md:text-xl" >Войти</button>
+        </form>
+    </div>
+    <div class="g-spacer my-20"></div>
+    <script src="/register.js"></script>
+    <script src="/header.js"></script>
+</body>
+</html>
+
+

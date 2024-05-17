@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <script src="/jquery.js"></script>
+    <link rel="stylesheet" href="/bootstrap.css" />
+    <script src="/tailwindcss.js"></script>
+    <link rel="stylesheet" href="/style.css" />
+    <title>Личный кабинет</title>
+</head>
+<body>
+<!-- НАЧАЛО МЕНЮ -->
+<header class="bg-green overflow-scroll ">
+    <div class="container-md">
+        <div class="menu">
+            <ul class=" d-flex align-items-center xl:justify-center bg-green py-3">
+                <li><a class="dropdown-item " href="/">Главная</a></li>
+                <li><a class="dropdown-item" href="/account">Личный кабинет</a></li>
+                <li><a class="dropdown-item" href="/new-point">Добавить новую точку</a></li>
+                <li><a class="dropdown-item" href="/map">Карта</a></li>
+                <li id="profileImg"><a class="dropdown-item" href="/account">
+                    <img src="/img/account_circle.svg" id="userAvatarMenu" class="aspect-square" alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--КОНЕЦ МЕНЮ -->
+
+<!-- НАЧАЛО КАРТОЧКИ ТОЧКИ -->
+<div class="container-md my-1.5 md:my-10 ">
+    <div class="flex flex-col md:flex-row md:gap-3">
+        <!-- НАЧАЛО ЛЕВОЙ СЕКЦИИ ИНФОРМАЦИИ О КАРТОЧКЕ ТОЧКИ (неважно, что она называется right-side)-->
+        <div class="right-side md:w-6/12 w-full">
+            <h1 class="md:text-5xl  md:mt-6 md:mb-8 font-semibold text-2xl">Карточка Точки</h1>
+            <div class="card-text my-3 card-name">
+                <label for="card_name block">Название</label>
+                <!-- НАЧАЛО ПОЛЯ БЕЗ ВВОДА ДАННЫХ В КРАТОЧКЕ ТОЧКИ -->
+                <span class="my-1 block w-full message-no-input">Название</span>
+
+                <!-- НАЧАЛО ПОЛЯ БЕЗ ВВОДА ДАННЫХ В КРАТОЧКЕ ТОЧКИ -->
+            </div>
+            <div class="card-text my-3 card-description">
+                <label for="card_name block">Описание</label>
+                <!-- НАЧАЛО ПОЛЯ БЕЗ ВВОДА ДАННЫХ В КРАТОЧКЕ ТОЧКИ -->
+                <span class="my-1 block w-full message-no-input">Описание</span>
+
+                <!-- НАЧАЛО ПОЛЯ БЕЗ ВВОДА ДАННЫХ В КРАТОЧКЕ ТОЧКИ -->
+            </div>
+
+        </div>
+        <!-- КОНЕЦ ЛЕВОЙ СЕКЦИИ ИНФОРМАЦИИ О КАРТОЧКЕ ТОЧКИ -->
+
+        <!-- НАЧАЛО СРЕДНЕЙ СЕКЦИИ ИНФОРМАЦИИ О КАРТОЧКЕ ТОЧКИ -->
+        <div class="central-side flex flex-col   md:w-3/12 w-full offset-md-4 justify-content-end">
+            <div class="card-text mt-3 card-status">
+                <label for="card_name block">Статус</label>
+                <!-- НАЧАЛО ПОЛЯ БЕЗ ВВОДА ДАННЫХ В КРАТОЧКЕ ТОЧКИ -->
+                <span class="my-1 block w-full message-no-input">Открыта</span>
+
+                <!-- НАЧАЛО ПОЛЯ БЕЗ ВВОДА ДАННЫХ В КРАТОЧКЕ ТОЧКИ -->
+            </div>
+            <div class="card-text mt-3 card-date-open">
+                <label for="card_name block">Дата открытия</label>
+                <!-- НАЧАЛО ПОЛЯ БЕЗ ВВОДА ДАННЫХ В КРАТОЧКЕ ТОЧКИ -->
+                <span class="my-1 block w-full message-no-input">Открыта</span>
+
+                <!-- НАЧАЛО ПОЛЯ БЕЗ ВВОДА ДАННЫХ В КРАТОЧКЕ ТОЧКИ -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- НАЧАЛО КАРТЫ -->
+    <div class="map mx-3 my-3 md:my-10">
+        <div class="map-title my-3 md:my-10 font-semibold text-2xl md:text-4xl">Карта точки</div>
+        <div id="map">
+            <script src="https://api-maps.yandex.ru/2.1/?apikey=cde97d8a-7675-4dd5-90c2-f7ee6e1eaec6&lang=ru_RU" type="text/javascript"></script>
+        </div>
+    </div>
+    <!-- КОНЕЦ КАРТЫ -->
+
+    <!-- НАЧАЛО ОДИНАРНОЙ ФОТОГРАФИИ -->
+    <div class="one-photo-wrapper">
+        <div class="map-title my-3 md:my-10 font-semibold text-2xl md:text-4xl">Фотография точки</div>
+        <div class="one-photo card-img-user">
+            <img src="" alt="">
+        </div>
+    </div>
+    <!-- КОНЕЦ ОДИНАРНОЙ ФОТОГРАФИИ  -->
+    <!-- КОНЕЦ ЗАГРУЗКИ ФОТОГРАФИИ  -->
+    <div class="mt-2 button-row flex flex-col md:flex-row mt-4  ">
+        <a class="md:!mt-0 block md:w-1/2 text-center rounded-xl py-2 md:!py-1
+        md:mx-auto bg-red text-white mb-1 md:!mb-0 text-md md:text-md md:me-1"
+           id="reject-point-user">Отклонить</a>
+        <a class="flex align-items-center justify-center px-1 py-2 md:!py-1
+        md:w-1/2 text-center mt-1 md:!mt-0 rounded-xl  bg-green text-white text-md md:text-md md:ml-2 "
+           id="aprove-point-user">Верифицировать</a>
+    </div>
+</div>
+<!-- КОНЕЦ КАРТОЧКИ ТОЧКИ  C ВВОДОМ ДАННЫХ-->
+<div class="g-spacer my-20"></div>
+<script src="/admin-point-card-from-user.js"></script>
+<script src="/header.js"></script>
+</body>
+</html>
+

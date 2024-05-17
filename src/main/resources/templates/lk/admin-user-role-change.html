@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <script src="/jquery.js"></script>
+    <link rel="stylesheet" href="/bootstrap.css" />
+    <script src="/tailwindcss.js"></script>
+
+    <link rel="stylesheet" href="/style.css" />
+    <title>Личный кабинет</title>
+</head>
+<body>
+<header class="bg-green overflow-scroll">
+    <div class="container-md">
+        <div class="menu">
+            <ul class="d-flex align-items-center md:justify-center bg-green py-3">
+                <li><a class="dropdown-item" href="/">Главная</a></li>
+                <li><a class="dropdown-item" href="/account">Личный кабинет</a></li>
+                <li>
+                    <a class="dropdown-item" href="/new-point"
+                    >Добавить новую точку</a
+                    >
+                </li>
+                <li><a class="dropdown-item" href="/map">Карта</a></li>
+                <li id="profileImg">
+                    <a class="dropdown-item" href="/account"
+                    ><img src="/img/account_circle.svg" id="userAvatarMenu" alt=""
+                    /></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="" id="changeUserProfile">
+    <div class="container-md my-1.5 md:my-10">
+        <div class="user-title md:text-4xl text-xl mb-5 text-center">
+            Данные пользователя
+        </div>
+        <form class="flex flex-col my-auto gap-2 change-role md:w-2/3 xl:w-1/2 md:max-w-[600px] w-full mx-auto md:my-10 my-3" action="" id="userDataForAdmin">
+            <div class="form-row">
+                <label for="inputName">Логин</label>
+                <span class="my-1 block w-full message-no-input">Имя</span>
+            </div>
+            <div class="form-row">
+                <label for="inputName">Фамилия</label>
+                <span class="my-1 block w-full message-no-input">Имя</span>
+            </div>
+            <div class="form-row">
+                <label for="inputName">Имя</label>
+                <span class="my-1 block w-full message-no-input">Имя</span>
+            </div>
+            <div class="form-row">
+                <label for="inputName">Отчество</label>
+                <span class="my-1 block w-full message-no-input">Имя</span>
+            </div>
+            <div class="form-row">
+                <label for="inputName">Роль</label>
+                <select class="block min-w-[200px] w-full message-no-input" name="userRole" id="userRole" value="USER">
+                </select>
+            </div>
+            <button class=" d-block  md:w-1/2 text-center rounded-md py-3 px-5 md:mx-auto bg-green text-white text-xl md:text-xl">Изменить роль</button>
+        </form>
+    </div>
+</div>
+
+<div class="g-spacer my-20"></div>
+<script src="/change_role_by_admin.js"></script>
+<script src="/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+:root {
+    --bs-blue: #0d6efd;
+    --bs-black: #000000;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #E30611;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #4C956C;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #F6F6F6;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.menu ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.menu li a{
+    color: var(--bs-white);
+    font-weight: 700;
+}
+#map{
+    margin: 1rem 0;
+    max-height: 500px;
+    max-width: 100%;
+    width: 100%;
+    height: 400px;
+}
+
+#map iframe {
+    width: 100%!important;
+    height: 400px!important;
+}
+
+#profileImg img {
+    background-color: var(--bs-white);
+    width: 40px;
+    border-radius: 50%;
+    min-height: 1.5rem;
+}
+
+.input-file {
+    position: relative;
+    display: inline-block;
+}
+.input-file input[type=file] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+}
+.input-file input[type=file]:disabled + .input-file-btn {
+    background-color: #eee;
+}
+.input-file-text {
+    padding: 0 10px;
+    line-height: 40px;
+    display: inline-block;
+}
+.form-row input[type=file] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+}
+.form-change-photo {
+    text-align: center;
+}
+.form-change-photo img {
+    width: 200px;
+    cursor: pointer;
+}
+.change-name-wrapper img{
+    max-width: 20px;
+    cursor: pointer;
+}
+.change-name-wrapper span{
+    display: inline-block;
+    margin-top: .2rem;
+    padding: .4rem 1.4rem;
+    border: 2px solid transparent;
+}
+input {
+    border: 2px solid var(--bs-black);
+    padding: .5rem 1rem!important;
+    border-radius: .5rem;
+}
+#nameChanger {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+.table-wrapper {
+    border: 2px solid var(--bs-gray);
+    border-radius: .5rem;
+}
+header::-webkit-scrollbar {
+    display: none;
+}
+
+.table-header {
+    box-shadow: 0px 2px 2px 0px #00000040;
+}
+.table-row-custom {
+
+    border: 2px solid #E0E0E0!important;
+}
+#pointStatus {
+    border-left: 3px solid #D9D9D9;
+}
+
+textarea {
+    border: 2px solid var(--bs-black);
+
+    padding: .5rem 1rem!important;
+    border-radius: .5rem;
+    max-width: 100%;
+    max-height: 300px;
+}
+select {
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    border: 2px solid var(--bs-black);
+    padding: .5rem 1rem ;
+    border-radius: .5rem;
+    background-image: url('/img/dropdown.svg');
+    background-repeat: no-repeat;
+    background-position: top 55% right 1rem;
+    min-width: 100px;
+}
+
+@media screen and (min-width: 997px) {
+}
+
+
+
+@media screen and (max-width: 996.9px) {
+
+    .form-change-photo img {
+        width: 120px;
+    }
+
+
+    .menu li a{
+        color: var(--bs-black);
+    }
+
+}
+
+.one-photo {
+    max-height: 500px;
+}
+.one-photo img, .two-photo img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+.one-photo img {
+    max-height: 500px;
+    aspect-ratio: 24 / 9;
+}
+.two-photo img {
+    max-height: 500px;
+    aspect-ratio: 1 / 1;
+}
+
+.message-no-input {
+    border: 2px solid var(--bs-black);
+    padding: .5rem 1rem!important;
+    border-radius: .5rem;
+}
+.two-photo.fullfiled {
+
+}
+
+#userSearch {
+    border: none;
+    padding: 0;
+}
+input[type="submit"] {
+    border: none;
+    padding: 0;
+}
+
+.modal {
+    background-color: #00000069;
+    backdrop-filter: blur(10px);
+}
+.modal-body {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 5rem;
+    width: 50%;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.close__X {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+}
+.X-left {
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 5px;
+    background-color: #cecece;
+    transform: rotate(45deg);
+}
+.X-right {
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 5px;
+    background-color: #cecece;
+    transform: rotate(-45deg);
+}
+
+.menu .dropdown-item{
+    border-radius: .3rem;
+}
+
+.login-form label, input:not([type="file"]):invalid~label,textarea~label {
+    position: absolute;
+    top: 25%;
+    left: 1rem;
+    transition: all .2s;
+}
+.form-row {
+    position: relative;
+}
+textarea:invalid~label {
+    position: absolute;
+    top: .5rem;
+    left: 1rem;
+}
+textarea:valid ~label, textarea:focus-visible~label,textarea:focus~label {
+    position: absolute;
+    left: 1rem;
+    top: -1.25rem;
+    font-size: smaller;
+}
+
+input:not([type="file"]):focus~label, input:not([type="file"]):focus-visible~label,
+input:not([type="file"]):focus-within~label,input:not([type="file"]):valid ~label {
+    position: absolute;
+    left: 1rem;
+    top: -45%;
+    font-size: smaller;
+}
+
+input:not([type="file"]):valid, textarea:valid  {
+    border: 1px solid #20c997;
+    outline:  1px solid #20c997;
+}
+@media screen and (max-width: 996.9px) {
+    :root{
+        --mobile-icon-width-996: 35px;
+        --mobile-icon-width-400: 28px;
+    }
+    header {
+        position: fixed;
+        z-index: 10000;
+        bottom: 0!important;
+        left: 0;
+        margin-bottom: 0!important;
+        overflow-x: hidden;
+        max-width: 100%;
+        min-width: 100%;
+    }
+    header ul>li{
+        width: 13%;
+    }
+    header .menu li a{
+        font-size: 0px;
+        padding: 1.1rem;
+    }
+    header .menu li:nth-child(1) a{
+        background-image: url('/img/house-window-svgrepo-com.svg');
+        background-size: var(--mobile-icon-width-996);
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    header .menu li:nth-of-type(2) a{
+        background-image: url('/img/profile-round-1342-svgrepo-com.svg');
+        background-size: var(--mobile-icon-width-996);
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    header .menu li:nth-of-type(3) a{
+        background-image: url('/img/map-pin-alt-svgrepo-com.svg');
+        background-size: var(--mobile-icon-width-996);
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    header .menu li:nth-of-type(4) a{
+        background-image: url('/img/map-svgrepo-com.svg');
+        background-size: var(--mobile-icon-width-996);
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .menu ul {
+        justify-content: space-between;
+        padding: .625rem 0!important;
+    }
+    .menu ul li{
+        padding: .3rem .5rem;
+        background-color: var(--bs-white);
+        border-radius: .5rem;
+        margin: 0 .5rem;
+    }
+    #profileImg {
+        margin-right: .5rem;
+        border-radius: 50%;
+        width: 45px;
+        padding: 0;
+    }
+
+    #profileImg img {
+        background-color: var(--bs-white);
+        width: 45px;
+        border-radius: 50%;
+        min-height: 2rem;
+        margin: 0 auto;
+    }
+    #profileImg .dropdown-item  {
+        padding:0;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 400px) {
+    header .menu li a{
+        background-size: var(--mobile-icon-width-400)!important;
+    }
+    header .menu li a{
+        padding: 0.85rem;
+    }
+}
+
+#pointCardFile {
+    padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
+}
+
+
+input#userSearch, input#userSearch~input[type="submit"], #searchPointsForm input[type="submit"] {
+    border: none;
+    outline: none;
+}
+
+

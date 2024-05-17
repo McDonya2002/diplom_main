@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <script src="/jquery.js"></script>
+    <link rel="stylesheet" href="/bootstrap.css" />
+    <script src="/tailwindcss.js"></script>
+    <link rel="stylesheet" href="/style.css" />
+    <title>Личный кабинет</title>
+  </head>
+  <body>
+  <!-- НАЧАЛО МЕНЮ -->
+  <header class="bg-green overflow-scroll ">
+      <div class="container-md">
+          <div class="menu">
+              <ul class=" d-flex align-items-center xl:justify-center bg-green py-3">
+                  <li><a class="dropdown-item " href="/">Главная</a></li>
+                  <li><a class="dropdown-item" href="/account">Личный кабинет</a></li>
+                  <li><a class="dropdown-item" href="/new-point">Добавить новую точку</a></li>
+                  <li><a class="dropdown-item" href="/map">Карта</a></li>
+                  <li id="profileImg"><a class="dropdown-item" href="/account">
+                      <img src="/img/account_circle.svg" id="userAvatarMenu" class="aspect-square" alt=""></a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </header>
+  <!--КОНЕЦ МЕНЮ -->
+    <div class="container-md my-1.5 md:my-10 ">
+
+    <form id="saveAprovePoint" method="post" class="login-form md:w-2/3 xl:w-1/2 md:max-w-[600px] w-full mx-auto md:my-10 my-3"
+          enctype="application/x-www-form-urlencoded">
+            <div class="md:text-4xl text-2xl mb-5 text-center">Вы уверены, что хотите верефицировать точку?</div>
+            <p class="mb-3">Если вы уверены, впишите ФИО нового работника</p>
+            <div class="form-row my-2">
+                <input class="w-full block" type="text" name="aprovePointUser" id="aprovePointUser" required>
+                <label for="aprovePointUser">ФИО работника</label>
+            </div>
+            <div class="mt-2 button-row flex flex-col md:flex-row mt-4  ">
+                <button class="md:!mt-0 block md:w-1/2 text-center rounded-xl py-2 md:!py-1
+                md:mx-auto bg-green text-white mb-1 md:!mb-0 text-md md:text-md md:me-1" >Сохранить</button>
+                <a class="flex align-items-center justify-center px-1 py-2 md:!py-1  md:w-1/2 text-center rounded-xl
+                mb-1 md:!mb-0  bg-green text-white text-md md:text-md md:ml-2" href="/account">Назад</a>
+            </div>
+        </form>
+    </div>
+    <div class="g-spacer my-20"></div>
+    <script src="/aprovePointUser.js"></script>
+    <script src="/header.js"></script>
+</body>
+</html>
+
+

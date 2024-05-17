@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <script src="/jquery.js"></script>
+    <link rel="stylesheet" href="/bootstrap.css" />
+    <script src="/tailwindcss.js"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+     <link rel="stylesheet" href="/style.css" />
+    <title>Приложение</title>
+</head>
+<body>
+    <!-- НАЧАЛО МЕНЮ -->
+    <header class="bg-green overflow-scroll ">
+        <div class="container-md">
+                <div class="menu">
+                    <ul class=" d-flex align-items-center xl:justify-center bg-green py-3">
+                        <li><a class="dropdown-item " href="/">Главная</a></li>
+                        <li><a class="dropdown-item" href="/account">Личный кабинет</a></li>
+                        <li><a class="dropdown-item" href="/new-point">Добавить новую точку</a></li>
+                        <li><a class="dropdown-item" href="/map">Карта</a></li>
+                        <li id="profileImg"><a class="dropdown-item" href="/account">
+                            <img src="/img/account_circle.svg" id="userAvatarMenu" class="aspect-square"alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </header>
+    <!--КОНЕЦ МЕНЮ -->
+    <div class="container-md  my-3 md:my-10">
+          <div class="text-headers mx-3 flex flex-col justify-between">
+            <h1 class="text-4xl font-semibold mr-2 ">Кто мы?</h1>
+            <h2 class="text-2xl font-medium  my-1 w-6/12"> Мы - самый успешный стартап на диком западе</h2>
+            <p>
+            </p>
+            <div class="text-wrapper  flex flex-col md:flex-row justify-between mt-2 ">
+            <a class="md:w-full text-center rounded-md py-3 px-5 my-1 md:my-0 md:me-2 bg-green d-block text-white text-xl md:text-xl"
+               href="/registration">Зарегистроваться</a>
+        
+            <a class="md:w-full  d-block text-center rounded-md py-3 px-5 my-1 md:my-0 md:ml-2 bg-green text-white text-xl md:text-xl"
+               href="/login/index">Авторизоваться</a>
+          </div>
+        </div>
+        <div id="map"></div>
+        <a class="ml-3 d-block  md:w-1/2 text-center rounded-md py-3 px-5 md:mx-auto bg-green text-white text-xl md:text-xl"
+           href="/new-point">Добавить новую точку</a>
+      </div>
+    <div class="g-spacer my-20"></div>
+<script src="/main.js"></script>
+<script src="/header.js"></script>
+</body>
+</html>
+

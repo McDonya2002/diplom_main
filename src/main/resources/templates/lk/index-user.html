@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <script src="/jquery.js"></script>
+    <link rel="stylesheet" href="/bootstrap.css" />
+    <script src="/tailwindcss.js"></script>
+   
+     <link rel="stylesheet" href="/style.css" />
+    <title>Личный кабинет</title>
+  </head>
+  <body>
+  <!-- НАЧАЛО МЕНЮ -->
+  <header class="bg-green overflow-scroll ">
+    <div class="container-md">
+      <div class="menu">
+        <ul class=" d-flex align-items-center xl:justify-center bg-green py-3">
+          <li><a class="dropdown-item " href="/">Главная</a></li>
+          <li><a class="dropdown-item" href="/account">Личный кабинет</a></li>
+          <li><a class="dropdown-item" href="/new-point">Добавить новую точку</a></li>
+          <li><a class="dropdown-item" href="/map">Карта</a></li>
+          <li id="profileImg"><a class="dropdown-item" href="/account">
+            <img src="/img/account_circle.svg" id="userAvatarMenu" class="aspect-square" alt=""></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!--КОНЕЦ МЕНЮ -->
+  <!-- НАЧАЛО ЛК -->
+    <div class="container-md my-3 md:my-10">
+        <form class="form-change-photo" method="post" enctype="multipart/form-data">
+            <label class="input-file">
+                <input type="file" name="file">
+                <img class="input-file-btn" src="/img/account_circle.svg"/>
+             </label>
+        </form>
+      <div class="change-name-wrapper text-center my-2">
+        <span class="name text-xl font-semibold" id="userName">Филина Ольга</span>
+        <input id="nameChanger" type="text" placeholder="Ваше Имя" value="Филина Ольга" class="hidden" >
+        <img class="inline edit" id="edit" src="/img/edit.svg" alt="">
+        <img class="inline hidden done" id="done" src="/img/done.svg" alt="">
+      </div>
+    </div>
+   <!-- КОНЕЦ ЛК -->
+    <!-- НАЧАЛО ТАБЛИЦЫ -->
+    <div
+            class="container-md max-h-[500px] my-3 px-0 md:my-10 overflow-scroll md:overflow-auto table-wrapper"
+    >
+      <div class="table-custom w-full">
+        <div class="table-header bg-gray px-2 py-1">
+          <div id="pointName" class="inline-block w-2/3 md:w-10/12 font-medium">
+            Название
+          </div>
+          <div id="pointStatus" class="inline-block py-1 px-3 font-medium">
+            Cтатус
+          </div>
+        </div>
+        <a href="/point-card" class="no-underline w-full">
+          <div class="table-row-custom flex align-items-center px-2 py-1">
+            <div id="pointName" class="w-full font-light px-2 no-underline">
+            </div>
+            <div id="pointStatusRow" class="py-1 px-3 text-center no-underline">
+              Закрыта
+            </div>
+          </div>
+        </a>
+        <a href="/card-page" class="no-underline w-full">
+          <div class="table-row-custom flex align-items-center px-2 py-1">
+            <div id="pointName" class="w-full font-light px-2 no-underline">
+            </div>
+            <a href="/action" class=""><div id="pointStatusRow" class="py-1 px-3 text-center no-underline text-red">
+              Открыта
+            </div></a>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- КОНЕЦ ТАБЛИЦЫ -->
+    <script src="/main.js"></script>
+    <script src="/header.js"></script>
+  </body>
+</html>
+
+

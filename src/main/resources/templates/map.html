@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map with Points</title>
+    <script src="/jquery.js"></script>
+    <link rel="stylesheet" href="/bootstrap.css" />
+    <script src="/tailwindcss.js"></script>
+    <link rel="stylesheet" href="/style_exception.css" />
+
+</head>
+<body>
+<!-- НАЧАЛО МЕНЮ -->
+<header class="bg-green overflow-scroll ">
+    <div class="container-md">
+        <div class="menu">
+            <ul class=" d-flex align-items-center xl:justify-center bg-green py-3">
+                <li><a class="dropdown-item " href="/">Главная</a></li>
+                <li><a class="dropdown-item" href="/account">Личный кабинет</a></li>
+                <li><a class="dropdown-item" href="/new-point">Добавить новую точку</a></li>
+                <li><a class="dropdown-item" href="/map">Карта</a></li>
+                <li id="profileImg"><a class="dropdown-item" href="/account">
+                    <img src="/img/account_circle.svg" id="userAvatarMenu" class="aspect-square" alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--КОНЕЦ МЕНЮ -->
+<div id="map">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=cde97d8a-7675-4dd5-90c2-f7ee6e1eaec6&lang=ru_RU" type="text/javascript"></script>
+</div>
+<div class="g-spacer my-20"></div>
+<script src="/map_full.js"></script>
+<script src="/header.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1"
+  />
+  <script src="/jquery.js"></script>
+  <link rel="stylesheet" href="/bootstrap.css" />
+  <script src="/tailwindcss.js"></script>
+  <link rel="stylesheet" href="/style.css" />
+  <title>Личный кабинет</title>
+</head>
+<body>
+<!-- НАЧАЛО МЕНЮ -->
+<header class="bg-green overflow-scroll ">
+  <div class="container-md">
+    <div class="menu">
+      <ul class=" d-flex align-items-center xl:justify-center bg-green py-3">
+        <li><a class="dropdown-item " href="/">Главная</a></li>
+        <li><a class="dropdown-item" href="/account">Личный кабинет</a></li>
+        <li><a class="dropdown-item" href="/new-point">Добавить новую точку</a></li>
+        <li><a class="dropdown-item" href="/map">Карта</a></li>
+        <li id="profileImg"><a class="dropdown-item" href="/account">
+          <img src="/img/account_circle.svg" id="userAvatarMenu" class="aspect-square" alt=""></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<!--КОНЕЦ МЕНЮ -->
+<div class="container-md my-1.5 md:my-10 ">
+  <form method="post" class="registry-form md:w-2/3 xl:w-1/2 md:max-w-[600px] w-full mx-auto md:my-10 my-3" id="addPointForm" enctype="multipart/form-data">
+    <div class="md:text-4xl text-2xl mb-5 text-center">Добавить точку</div>
+    <div class="mapPoint !max-h-[250px] max-w-full md:max-w-[600px]" id="map">
+      <script src="https://api-maps.yandex.ru/2.1/?apikey=cde97d8a-7675-4dd5-90c2-f7ee6e1eaec6&lang=ru_RU" type="text/javascript"></script>
+    </div>
+    <script>
+    </script>
+    <div class="form-wrapper flex flex-col md:flex-row">
+      <div class="left-side md:w-1/2 w-full md:mr-1">
+        <div class="form-row mt-4">
+          <input class="w-full block" type="text" name="pointCardName" id="pointCardName" required>
+          <label for="pointCardName">Название</label>
+        </div>
+        <div class="form-row mt-4">
+          <textarea class="w-full block max-h-[100px] h-[50px]" type="text" name="pointCardDescription" id="pointCardDescription"></textarea>
+          <label for="pointCardDescription">Описание</label>
+        </div>
+        <div class="form-row mt-4">
+          <input class="w-full block" type="date" name="pointCardDate" id="pointCardDate" required>
+          <label for="pointCardDate"></label>
+
+        </div>
+      </div>
+      <div class="right-side md:w-1/2 w-full md:ml-1 flex flex-col-reverse md:flex-col justify-between">
+
+        <div class="form-row mt-4">
+          <input class="w-full block " type="file" name="pointCardFile" id="pointCardFile" required>
+          <label for="pointCardFile" class="bg-green !static py-11 !flex text-white align-items-center
+          justify-center text-center rounded-md text-xl">Выбрать файл</label>
+        </div>
+        <div class="form-row mt-4">
+          <input class="w-full block" type="text" name="pointCardCoordinates" id="pointCardCoordinates">
+          <label for="pointCardCoordinates">Координаты</label>
+        </div>
+      </div>
+    </div>
+    <button class="mt-4 block w-full text-center rounded-xl py-2 md:!py-1 md:mx-auto bg-green text-white text-xl
+    md:text-xl xl:mb-0 mb-20" id="addPoint">Добавить точку</button>
+  </form>
+</div>
+<div class="g-spacer my-20"></div>
+<script src="/addNewPoint.js"></script>
+<script src="/header.js"></script>
+</body>
+</html>
+
+
+
+

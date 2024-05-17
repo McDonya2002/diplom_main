@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/diplom
+    username: root
+    password: root
+
+server:
+  port: 8443
+  http2:
+    enabled: true
+  ssl:
+    key-store: /diplom-ssl/localhost.p12
+    key-store-password: password
+    key-alias: localhost

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <script src="/jquery.js"></script>
+    <link rel="stylesheet" href="/bootstrap.css" />
+    <script src="/tailwindcss.js"></script>
+    <link rel="stylesheet" href="/style.css" />
+    <title>Личный кабинет</title>
+  </head>
+  <body>
+  <!-- НАЧАЛО МЕНЮ -->
+  <header class="bg-green overflow-scroll ">
+      <div class="container-md">
+          <div class="menu">
+              <ul class=" d-flex align-items-center xl:justify-center bg-green py-3">
+                  <li><a class="dropdown-item " href="/">Главная</a></li>
+                  <li><a class="dropdown-item" href="/account">Личный кабинет</a></li>
+                  <li><a class="dropdown-item" href="/new-point">Добавить новую точку</a></li>
+                  <li><a class="dropdown-item" href="/map">Карта</a></li>
+                  <li id="profileImg"><a class="dropdown-item" href="/account">
+                      <img src="/img/account_circle.svg" id="userAvatarMenu" class="aspect-square" alt=""></a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </header>
+  <!--КОНЕЦ МЕНЮ -->
+    <div class="container-md my-1.5 md:my-10 ">
+        <form method="post" class="login-form md:w-2/3 xl:w-1/2 md:max-w-[600px] w-full mx-auto md:my-10 my-3" >
+            <div class="md:text-4xl text-2xl mb-5 text-center">Авторизация</div>
+            <div class="form-row my-2">
+                <input class="w-full block" type="text" name="userLoginForm" id="userLoginForm" required placeholder="Логин">
+            </div>
+            <div class="form-row mt-4">
+                <input class="w-full block" type="password" name="userPasswordForm" id="userPasswordForm" required>
+                <label for="userLoginForm">Пароль</label>
+            </div>
+            <div class="mt-2 button-row flex flex-col md:flex-row mt-5">
+                <button class="md:!mt-0 block md:w-1/2 text-center rounded-xl py-2 md:!py-1
+                md:mx-auto bg-green text-white text-md md:text-md" >Войти</button>
+                <div class="or md:mx-5 md:my-0 my-3 text-center text-2xl font-semibold">ИЛИ</div>
+                <a class="flex align-items-center justify-center px-1 py-2 md:!py-1
+                md:w-1/2 text-center rounded-xl md:mx-auto bg-green text-white text-md md:text-md" href="/register">Зарегистрироваться</a>
+            </div>
+        </form>
+    </div>
+    <script src="/login.js"></script>
+</body>
+</html>
+
+

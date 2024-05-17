@@ -1,0 +1,207 @@
+  <!DOCTYPE html>
+  <html lang="ru">
+    <head>
+      <meta charset="UTF-8" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1"
+      />
+      <script src="/jquery.js"></script>
+      <link rel="stylesheet" href="/bootstrap.css" />
+      <script src="/tailwindcss.js"></script>
+
+      <link rel="stylesheet" href="/style.css" />
+      <title>Личный кабинет</title>
+    </head>
+    <body>
+    <!-- НАЧАЛО МЕНЮ -->
+    <header class="bg-green overflow-scroll ">
+      <div class="container-md">
+        <div class="menu">
+          <ul class=" d-flex align-items-center xl:justify-center bg-green py-3">
+            <li><a class="dropdown-item " href="/">Главная</a></li>
+            <li><a class="dropdown-item" href="/account">Личный кабинет</a></li>
+            <li><a class="dropdown-item" href="/new-point">Добавить новую точку</a></li>
+            <li><a class="dropdown-item" href="/map">Карта</a></li>
+            <li id="profileImg"><a class="dropdown-item" href="/account">
+              <img src="/img/account_circle.svg" id="userAvatarMenu" class="aspect-square" alt=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!--КОНЕЦ МЕНЮ -->
+    <!-- НАЧАЛО ЛК -->
+    <div class="container-md my-3 md:my-10">
+      <form
+        class="form-change-photo"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <label class="input-file">
+          <input type="file" name="file" />
+          <img class="input-file-btn" src="/img/account_circle.svg" />
+        </label>
+      </form>
+      <div class="change-name-wrapper text-center my-2">
+        <span class="name text-xl font-semibold" id="userName"
+          >Филина Ольга</span
+        >
+        <input
+          id="nameChanger"
+          type="text"
+          placeholder="Ваше Имя"
+          value="Филина Ольга"
+          class="hidden"
+        />
+        <img class="inline edit" id="edit" src="/img/edit.svg" alt="" />
+        <img class="inline hidden done" id="done" src="/img/done.svg" alt="" />
+      </div>
+    </div>
+    <!-- КОНЕЦ ЛК -->
+
+      <!-- НАЧАЛО ТАБЛЦИЫ ЮЗЕРОВ -->
+      <div class="container-md table-title">
+        <div class="flex flex-col justify-between md:flex-row">
+          <div class="text-title md:w-1/2 w-full md:text-3xl text-xl">СПИСОК ПОЛЬЗОВАТЕЛЕЙ</div>
+          <div class="search-title message-no-input flex flex-col justify-end md:flex-row md:w-1/2 w-full md:text-3xl text-xl md:mx-2">
+            <form action="" id="searchUsersForm" class="w-full flex flex-row justify-end md:flex-row">
+              <input type="text" class="w-full text-md ml-1 focus:outline-0" id="userSearch" placeholder="Введите логин">
+              <input type="submit" value="&#128269;">
+            </form>
+
+          </div>
+        </div>
+      </div>
+    
+    <div
+    class="container-md max-h-[600px] my-3 md:my-10 overflow-scroll md:overflow-auto table-wrapper"
+  >
+    <div class="table-custom user-table w-full">
+      <div class="table-header bg-gray px-2 py-1">
+        <div id="pointName" class="inline-block w-2/3 md:w-10/12 font-medium">
+          ИМЯ
+        </div>
+        <div id="pointStatus" class="inline-block py-1 px-3 font-medium">
+          РОЛЬ
+        </div>
+      </div>
+
+      <!-- НАЧАЛО ОДНОЙ СТРОКИ В ТАБЛИЦЕ ТОЧЕК БЕЗ КЛИКАБЕЛЬНОГО СТАТУСА -->
+      <a href="/card-page" class="no-underline w-full">
+        <div class="table-row-custom flex align-items-center px-2 py-1">
+          <div id="pointName" class="w-full font-light px-2 no-underline">
+
+          </div>
+          <div id="pointStatusRow" class="text-green-500 py-1 px-3 text-center no-underline">
+            Закрыта
+          </div>
+        </div>
+      </a>
+       <!-- КОНЕЦ ОДНОЙ СТРОКИ В ТАБЛИЦЕ ТОЧЕК  БЕЗ КЛИКАБЕЛЬНОГО СТАТУСА-->
+
+      <!-- НАЧАЛО ОДНОЙ СТРОКИ В ТАБЛИЦЕ ТОЧЕК  С КЛИКАБЕЛЬНЫМ СТАТУСОМ -->
+      <a href="/card-page" class="no-underline w-full ">
+        <div class="table-row-custom flex align-items-center px-2 py-1">
+          <div id="pointName" class="w-full font-light px-2 no-underline">
+            Точка Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Repellat, mollitia.
+          </div>
+           <!-- НАЧАЛО КЛИКАБЕГОГО СТАТУСА -->
+          <a
+            href="/some-url-to-change"
+            class="bg-red rounded"
+            ><div
+              id="pointStatusRow"
+              class="py-1 px-3 text-center no-underline text-red"
+            >
+              Закрыть
+            </div></a
+          >
+          <!-- КОНЕЦ КЛИКАБЕГОГО СТАТУСА -->
+        </div>
+      </a>
+      <!-- КОНЕЦ ОДНОЙ СТРОКИ В ТАБЛИЦЕ ТОЧЕК С КЛИКАБЕЛЬНЫМ СТАТУСОМ -->
+
+    </div>
+  </div>
+    <!-- КОНЕЦ ТАБЛЦИЫ ЮЗЕРОВ -->
+
+      <!-- НАЧАЛО ТАБЛИЦЫ  ТОЧЕК-->
+      <div class="container-md table-title mt-5">
+        <div class="flex flex-col justify-between md:flex-row">
+          <div class="text-title md:w-1/2 w-full md:text-3xl text-xl">СПИСОК ТОЧЕК</div>
+          <div class="search-title message-no-input flex flex-col justify-end md:flex-row md:inline-block md:w-1/2 w-full md:text-3xl text-xl md:mx-2">
+            <form action="" id="searchPointsForm" class=" flex w-full text-xl flex-row justify-between md:flex-row">
+              <select class="border-none w-full focus:outline-0" name="PointsByRole" id="PointsByRole">
+                <option value="">Выберете роль</option>
+                <option value="user">Юзер</option>
+                <option value="worker">Работник</option>
+              </select>
+
+              <input type="submit" value="&#128269;">
+            </form>
+
+          </div>
+        </div>
+      </div>
+    <div
+      class="container-md max-h-[600px] my-3 md:my-10 overflow-scroll md:overflow-auto table-wrapper"
+    >
+      <div class="table-custom table-points w-full">
+        <div class="table-header bg-gray px-2 py-1">
+          <div id="pointName" class="inline-block w-2/3 md:w-10/12 font-medium">
+            Название
+          </div>
+          <div id="pointStatus" class="inline-block py-1 px-3 font-medium">
+            Cтатус
+          </div>
+        </div>
+
+        <!-- НАЧАЛО ОДНОЙ СТРОКИ В ТАБЛИЦЕ ТОЧЕК БЕЗ КЛИКАБЕЛЬНОГО СТАТУСА -->
+        <a href="/card-page" class="no-underline w-full">
+          <div class="table-row-custom flex align-items-center px-2 py-1">
+            <div id="pointName" class="w-full font-light px-2 no-underline">
+              Точка Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Repellat, mollitia.
+            </div>
+            <div id="pointStatusRow" class="text-green-500 py-1 px-3 text-center no-underline">
+              Закрыта
+            </div>
+          </div>
+        </a>
+         <!-- КОНЕЦ ОДНОЙ СТРОКИ В ТАБЛИЦЕ ТОЧЕК  БЕЗ КЛИКАБЕЛЬНОГО СТАТУСА-->
+
+        <!-- НАЧАЛО ОДНОЙ СТРОКИ В ТАБЛИЦЕ ТОЧЕК  С КЛИКАБЕЛЬНЫМ СТАТУСОМ -->
+        <a href="/card-page" class="no-underline w-full " >
+          <div class="table-row-custom flex align-items-center px-2 py-1">
+            <div id="pointName" class="w-full font-light px-2 no-underline">
+              Точка Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Repellat, mollitia.
+            </div>
+             <!-- НАЧАЛО КЛИКАБЕГОГО СТАТУСА -->
+            <a
+              href="/some-url-to-change"
+              class="bg-red rounded"
+              ><div
+                id="pointStatusRow"
+                class="py-1 px-3 text-center no-underline text-red"
+              >
+                Закрыть
+              </div></a
+            >
+            <!-- КОНЕЦ КЛИКАБЕГОГО СТАТУСА -->
+          </div>
+        </a>
+        <!-- КОНЕЦ ОДНОЙ СТРОКИ В ТАБЛИЦЕ ТОЧЕК С КЛИКАБЕЛЬНЫМ СТАТУСОМ -->
+
+      </div>
+    </div>
+    <div class="g-spacer my-20"></div>
+    <script src="/main.js"></script>
+    <script src="/header.js"></script>
+  </body>
+
+
+</html>
+
